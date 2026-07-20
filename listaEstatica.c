@@ -137,3 +137,29 @@ int remover(Lista* l, TipoItem x) {
 
     return 1;
 }
+
+// Retorna a quantidade de elementos da lista
+// Entrada: lista
+// Retorno: número de elementos armazenados na lista
+// Pré-condição: nenhuma
+// Pós-condição: nenhuma
+int tamanho(Lista* l) {
+    if(l == NULL)
+        return 0;
+    return l->ultimo - l->primeiro;
+}
+
+// Retorna o elemento armazenado em uma posição da lista
+// Entrada: lista e posição do elemento
+// Retorno: elemento armazenado ou -1 caso a posição seja inválida
+// Pré-condição: nenhuma
+// Pós-condição: nenhuma
+TipoItem obter(Lista* l, int posicao) {
+    if(l == NULL)
+        return -1;
+
+    if(posicao < l->primeiro || posicao >= l->ultimo)
+        return -1;
+
+    return l->item[posicao];
+}

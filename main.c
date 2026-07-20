@@ -19,6 +19,17 @@ int main(int argc, const char* argv[]) {
     printf("\nLista após a remoção:\n");
     imprimir(l);
 
+    inserir(l, 43);
+    inserir(l, 55);
+
+    int tam = tamanho(l);
+    printf("\nO tamanho da lista é: %d\n", tam);
+
+    TipoItem x = obter(l, 3);
+    printf("\nO item localizado na posição 4 é: %d\n\n", x);
+
+    imprimir(l);
+
     liberar(l);
 
     printf("\n");
