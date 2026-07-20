@@ -50,3 +50,44 @@ void liberar(Lista* l) {
     if(l != NULL)
         free(l);
 }
+
+// Retorna o próximo item da lista
+// Entrada: lista
+// Retorno: próximo elemento da lista ou -1 casa não existam mais elementos
+// Pré-condição: ponteiro não nulo para estrutura lista
+// Pós-condição: iterador avançado para o próximo elemento
+TipoItem proximo(Lista* l) {
+    l->pos++;
+    if(l->pos >= l->ultimo)
+        return -1;  // acabou itens
+    else 
+        return l->item[l->pos];
+}
+
+// Retorna o primeiro item da lista
+// Entrada: lista
+// Retorno: primeiro elemento da lista ou -1 caso esteja vazia
+// Pré-condição: ponteiro não nulo para estrutura lista
+// Pós-condição: iterador posiciona no primeiro elemento da lista
+TipoItem primeiro(Lista* l) {
+    l->pos = -1;
+    return proximo(l);
+}
+
+// Imprime usando as funções iteradoras para percorrer a lista
+// Entrada: lista
+// Retorno: nenhum
+// Pré-condição: ponteiro não nulo para lista
+// Pós-condição: os itens da lista são exibidos na tela
+void imprimir(Lista* l) {
+    if(vazia(l))
+        printf("Lista vazia.\n");
+    else {
+        TipoItem x = primeiro(l);
+        printf("[ ");
+        do {
+            printf("%d ", x);
+        } while((x = proximo(l)) != -1);
+        printf("]\n");
+    }
+}
