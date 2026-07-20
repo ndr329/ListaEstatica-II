@@ -11,6 +11,12 @@ int main(int argc, const char* argv[]) {
     inserir(l, 30);
     inserir(l, 40);
 
+    printf("Lista após as inserções:\n");
+    imprimir(l);
+
+    remover(l, 20);
+
+    printf("\nLista após a remoção:\n");
     imprimir(l);
 
     liberar(l);

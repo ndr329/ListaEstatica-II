@@ -64,4 +64,18 @@ TipoItem primeiro(Lista* l);
 // Pós-condição: os itens da lista são exibidos na tela
 void imprimir(Lista* l);
 
+// Busca um elemento na lista
+// Entrada: lista e elemento a ser procurado
+// Retorno: posição do elemento caso encontrado ou -1 caso contrário
+// Pré-condição: ponteiro não nulo para estrutura lista
+// Pós-condição: nenhuma
+int buscar(Lista* l, TipoItem x);
+
+// Remove um elemento da lista
+// Entrada: lista e elemento a ser removido
+// Retorno: verdadeiro se a remoção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nulo para estrutura lista
+// Pós-condição: elemento removido da lista, caso exista
+int remover(Lista* l, TipoItem x);
+
 #endif /* listaEstatica_h */

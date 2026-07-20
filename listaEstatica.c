@@ -91,3 +91,49 @@ void imprimir(Lista* l) {
         printf("]\n");
     }
 }
+
+// Busca um elemento na lista
+// Entrada: lista e elemento a ser procurado
+// Retorno: posição do elemento caso encontrado ou -1 caso contrário
+// Pré-condição: ponteiro não nulo para estrutura lista
+// Pós-condição: nenhuma
+int buscar(Lista* l, TipoItem x) {
+    int i;
+
+     if(l == NULL)
+        return -1;
+
+    for(i = l->primeiro; i < l->ultimo; i++) {
+        if(l->item[i] == x)
+            return i;
+    }
+    return -1;
+}
+
+// Remove um elemento da lista
+// Entrada: lista e elemento a ser removido
+// Retorno: verdadeiro se a remoção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nulo para estrutura lista
+// Pós-condição: elemento removido da lista, caso exista
+int remover(Lista* l, TipoItem x) {
+    int i;
+    int pos;
+
+    if(l == NULL)
+        return 0;
+
+    if(vazia(l))
+        return 0;
+
+    pos = buscar(l, x);
+
+    if(pos == -1)
+        return 0;
+
+    for(i = pos; i < l->ultimo - 1; i++) 
+        l->item[i] = l->item[i + 1];
+
+    l->ultimo--;
+
+    return 1;
+}
