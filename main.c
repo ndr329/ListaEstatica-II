@@ -30,6 +30,10 @@ int main(int argc, const char* argv[]) {
 
     imprimir(l);
 
+    inserir_pos(l, 3, 47);
+    
+    imprimir(l);
+
     liberar(l);
 
     printf("\n");

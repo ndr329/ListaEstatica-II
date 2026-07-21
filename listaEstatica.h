@@ -92,4 +92,11 @@ int tamanho(Lista* l);
 // Pós-condição: nenhuma
 TipoItem obter(Lista* l, int posicao);
 
+// Insere um elemento em uma posição da lista
+// Entrada: lista, posição de inserção e elemento a ser inserido
+// Retorno: verdadeiro se a inserção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nulo para a estrutura lista e posição válida
+// Pós-condição: elemento inserido na posição informada e lista atualizada
+int inserir_pos(Lista* l, int posicao, TipoItem item);
+
 #endif /* listaEstatica_h */

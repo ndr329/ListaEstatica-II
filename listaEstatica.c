@@ -163,3 +163,29 @@ TipoItem obter(Lista* l, int posicao) {
 
     return l->item[posicao];
 }
+
+// Insere um elemento em uma posição da lista
+// Entrada: lista, posição de inserção e elemento a ser inserido
+// Retorno: verdadeiro se a inserção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nulo para a estrutura lista e posição válida
+// Pós-condição: elemento inserido na posição informada e lista atualizada
+int inserir_pos(Lista* l, int posicao, TipoItem item) {
+    int i;
+
+    if(l == NULL)
+        return 0;
+
+    if(l->ultimo == TAM_MAX)
+        return 0;
+
+    if(posicao < 0 || posicao > l->ultimo)
+        return 0;
+
+    for(i = l->ultimo; i > posicao; i--)
+        l->item[i] = l->item[i - 1];
+
+    l->item[posicao] = item;
+    l->ultimo++;
+
+    return 1;
+}
