@@ -99,4 +99,11 @@ TipoItem obter(Lista* l, int posicao);
 // Pós-condição: elemento inserido na posição informada e lista atualizada
 int inserir_pos(Lista* l, int posicao, TipoItem item);
 
+// Remove um elemento de uma posição da lista
+// Entrada: lista e posição do item a ser removido
+// Retorno: verdadeiro se a remoção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nulo para estrutura lista, lista não vazia e posição válida
+// Pós-condição: elemento removido da lista e itens posteriores deslocados
+int remover_pos(Lista* l, int posicao);
+
 #endif /* listaEstatica_h */

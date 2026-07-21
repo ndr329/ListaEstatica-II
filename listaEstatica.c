@@ -189,3 +189,28 @@ int inserir_pos(Lista* l, int posicao, TipoItem item) {
 
     return 1;
 }
+
+// Remove um elemento de uma posição da lista
+// Entrada: lista e posição do item a ser removido
+// Retorno: verdadeiro se a remoção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nulo para estrutura lista, lista não vazia e posição válida
+// Pós-condição: elemento removido da lista e itens posteriores deslocados
+int remover_pos(Lista* l, int posicao) {
+    int i;
+
+    if(l == NULL)
+        return 0;
+
+    if(vazia(l))
+        return 0;
+
+    if(posicao < 0 || posicao >= l->ultimo)
+        return 0;
+
+    for(i = posicao; i < l->ultimo - 1; i++)
+        l->item[i] = l->item[i + 1];
+
+    l->ultimo--;
+
+    return 1;
+}
