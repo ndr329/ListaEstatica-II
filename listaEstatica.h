@@ -92,6 +92,13 @@ int tamanho(Lista* l);
 // Pós-condição: nenhuma
 TipoItem obter(Lista* l, int posicao);
 
+// Insere um elemento no início da lista
+// Entrada: lista e elemento a se inserido
+// Retorno: verdadeiro se a inserção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nula para estrutura lista e lista não cheia
+// Pós-condição: elemento inserido na primeira posição da lista
+int inserir_inicio(Lista* l, TipoItem item);
+
 // Insere um elemento em uma posição da lista
 // Entrada: lista, posição de inserção e elemento a ser inserido
 // Retorno: verdadeiro se a inserção foi realizada, falso caso contrário

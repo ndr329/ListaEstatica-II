@@ -164,6 +164,29 @@ TipoItem obter(Lista* l, int posicao) {
     return l->item[posicao];
 }
 
+// Insere um elemento no início da lista
+// Entrada: lista e elemento a se inserido
+// Retorno: verdadeiro se a inserção foi realizada, falso caso contrário
+// Pré-condição: ponteiro não nula para estrutura lista e lista não cheia
+// Pós-condição: elemento inserido na primeira posição da lista
+int inserir_inicio(Lista* l, TipoItem item) {
+    int i;
+
+    if(l == NULL)
+        return 0;
+
+    if(l->ultimo == TAM_MAX)
+        return 0;
+
+    for(i = l->ultimo; i > l->primeiro; i--)
+        l->item[i] = l->item[i - 1];
+
+    l->item[l->primeiro] = item;
+    l->ultimo++;
+
+    return 1;
+}
+
 // Insere um elemento em uma posição da lista
 // Entrada: lista, posição de inserção e elemento a ser inserido
 // Retorno: verdadeiro se a inserção foi realizada, falso caso contrário
