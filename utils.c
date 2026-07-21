@@ -4,7 +4,7 @@
 
 #include "listaEstatica.h"
 
-// Exibi o menu de opções do programa
+// Exibe o menu de opções do programa
 // Entrada: nenhuma
 // Retorno: nenhum
 // Pré-condição: nenhuma
@@ -73,6 +73,7 @@ void menu(void) {
                 printf("Informe a posição do item: ");
                 scanf("%d", &pos);
                 remover_pos(l, pos);
+                break;
             case 0:
                 printf("Saindo do programa...\n");
                 break;

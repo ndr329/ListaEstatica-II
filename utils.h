@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-// Exibi o menu de opções do programa
+// Exibe o menu de opções do programa
 // Entrada: nenhuma
 // Retorno: nenhum
 // Pré-condição: nenhuma

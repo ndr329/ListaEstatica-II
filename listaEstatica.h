@@ -39,13 +39,13 @@ int inserir(Lista* l, TipoItem item);
 // Libera a memória ocupada pela lista
 // Entrada: lista
 // Retorno: nenhum
-// Pré-condição: ponteiro para uma lista criada dinâmicamente
+// Pré-condição: ponteiro para uma lista criada dinamicamente
 // Pós-condição: memória da lista liberada
 void liberar(Lista* l);
 
 // Retorna o próximo item da lista
 // Entrada: lista
-// Retorno: próximo elemento da lista ou -1 casa não existam mais elementos
+// Retorno: próximo elemento da lista ou -1 caso não existam mais elementos
 // Pré-condição: ponteiro não nulo para estrutura lista
 // Pós-condição: iterador avançado para o próximo elemento
 TipoItem proximo(Lista* l);
