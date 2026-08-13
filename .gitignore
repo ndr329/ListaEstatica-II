@@ -1,0 +1,12 @@
+# Executáveis
+*.out
+*.exe
+*.app
+listaEstatica_II
+
+# Arquivos objeto
+*.o
+
+# Diretórios de compilação
+build/
+cmake-build-*/
